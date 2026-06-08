@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <!-- Configuración básica -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Nombre que aparece en la pestaña -->
+    <title>TechGear</title>
+
+    <!-- Conectar CSS -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <!-- ENCABEZADO -->
+    <header>
+
+        <div class="logo">
+            TECHGEAR
+        </div>
+
+        <!-- Menú -->
+        <nav>
+
+            <a href="#">Inicio</a>
+            <a href="#productos">Productos</a>
+            <a href="#categorias">Categorías</a>
+            <a href="#contacto">Contacto</a>
+
+        </nav>
+
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+
+        <div class="contenido-hero">
+
+            <h1>MEJORA TU EXPERIENCIA GAMER</h1>
+
+            <p>
+                Los mejores periféricos para jugadores y profesionales.
+            </p>
+
+            <button onclick="mostrarMensaje()">
+                Comprar Ahora
+            </button>
+
+        </div>
+
+    </section>
+
+    <!-- CATEGORIAS -->
+    <section id="categorias">
+        <h2>Categorías</h2>
+
+        <div class="grid">
+
+            <div class="card">🖱️ Mouse</div>
+            <div class="card">⌨️ Teclados</div>
+            <div class="card">🎧 Audífonos</div>
+            <div class="card">🎤 Micrófonos</div>
+            <div class="card">🎮 Consolas</div>
+            <div class="card">💻 Notebooks</div>
+            <div class="card">📱 Celulares</div>
+            <div class="card">💻 Laptops</div>
+            <div class="card">📓 Cuadernos</div>
+            <div class="card">👟 Zapatos</div>
+
+        </div>
+
+    </section>
+
+    <!-- PRODUCTOS -->
+    <section id="productos">
+
+        <h2>Productos Destacados</h2>
+
+        <div class="productos-grid">
+
+            <div class="producto">
+
+                <img src="imajenes/Teclado RGB.jpg" alt="Teclado">
+
+                <h3>Teclado RGB</h3>
+
+                <p>$250.000</p>
+
+                <button onclick="agregarCarrito('Teclado RGB')">
+                     Agregar
+                    </button>
+
+            </div>
+
+            <div class="producto">
+
+                <img src="imajenes/Microfonos.webp" alt="Microfono">
+
+                <h3>Microfono</h3>
+
+                <p>$120.000</p>
+
+                <button onclick="agregarCarrito('Microfono')">
+                    Agregar
+                </button>
+
+            </div>
+            <div class="producto">
+
+                <img src="imajenes/mause Gamer.jpg" alt="Mouse">
+
+                <h3>Mouse Gamer</h3>
+
+                <p>$120.000</p>
+
+                <button onclick="agregarCarrito('Mouse Gamer')">
+                    Agregar
+                </button>
+
+            </div>
+            <div class="producto">
+
+                <img src="imajenes/Audifonos RGB.png" alt="Audífonos">
+
+                <h3>Audífonos RGB</h3>
+
+                <p>$100.000</p>
+
+                <button onclick="agregarCarrito('Audífonos RGB')">
+                    Agregar
+                </button>
+
+            </div>
+<div class="producto">
+
+                <img src="imajenes/Consolas.jpg" alt="Consolas">
+
+                <h3>Consolas</h3>
+
+                <p>$500.000</p>
+
+                <button onclick="agregarCarrito('Consolas')">
+                    Agregar
+                </button>
+
+            </div>
+
+        <div class="producto">
+
+                <img src="imajenes/Notebook.jpg" alt="Notebook">
+
+                <h3>Notebook</h3>
+
+                <p>$10.000</p>
+
+                <button onclick="agregarCarrito('Notebook')">
+                    Agregar
+                </button>
+
+            </div>
+            <div class="producto">
+
+                <img src="imajenes/celulares.jpg" alt="Celular">
+
+                <h3>Celular</h3>
+
+                <p>$5'000.000</p>
+
+                <button onclick="agregarCarrito('Celular')">
+                    Agregar
+                </button>
+
+            </div>
+             <div class="producto">
+
+                <img src="imajenes/laptops.jpg" alt="Laptop">
+
+                <h3>Laptop</h3>
+
+                <p>$2'000.000</p>
+
+                <button onclick="agregarCarrito('Laptop')">
+                    Agregar
+                </button>
+                 </div>
+
+             <div class="producto">
+
+                <img src="imajenes/Cuadernos.jpg" alt="Cuaderno">
+
+                <h3>Cuaderno</h3>
+
+                <p>$10.000</p>
+
+                <button onclick="agregarCarrito('Cuaderno')">
+                    Agregar
+                </button>
+             </div>
+             <div class="producto">
+
+                <img src="imajenes/Zapatos.jpg" alt="Zapatos">
+
+                <h3>Zapatos</h3>
+
+                <p>$60.000</p>
+
+                <button onclick="agregarCarrito('Zapatos')">
+                    Agregar
+                </button>
+             </div>
+             <div style="text-align:center; margin-top:30px;">
+
+    <button onclick="enviarWhatsApp()">
+
+        Finalizar compra por WhatsApp
+
+    </button>
+
+</div>
+<!-- ========================================= -->
+<!-- CARRITO -->
+<!-- ========================================= -->
+
+<div class="carrito">
+
+    <h2>🛒 Carrito</h2>
+
+    <p id="contador">
+        Productos: 0
+    </p>
+
+    <p id="total">
+        Total: $0
+    </p>
+
+    <ul id="lista-carrito"></ul>
+
+</div>
+
+
+    </section>
+
+    <!-- CONTACTO -->
+    <section id="contacto">
+
+        <h2>Contáctanos</h2>
+
+        <form>
+
+            <input type="text" placeholder="Nombre">
+
+            <input type="email" placeholder="Correo">
+
+            <textarea placeholder="Mensaje"></textarea>
+
+            <button type="submit">
+                Enviar
+            </button>
+
+        </form>
+
+    </section>
+
+    <!-- Pie de página -->
+    <footer>
+
+        <p>
+            © 2026 TechGear
+        </p>
+
+    </footer>
+
+    <script src="carriro de compra.js"></script>
+
+</body>
+
+</html>
